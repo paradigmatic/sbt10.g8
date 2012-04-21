@@ -3,10 +3,12 @@ package $name$
 import org.scalatest.FlatSpec
 import org.scalatest.matchers.ShouldMatchers
 
-class StubSpec extends FlatSpec with ShouldMatchers {
+class StubSpec extends FreeSpec with ShouldMatchers {
 
-  "This spec" should "pass soon or later" in {
-    pending
+  "This spec" - {
+    "pass soon or later" - {
+      pending
+    }
   }
 
 }
