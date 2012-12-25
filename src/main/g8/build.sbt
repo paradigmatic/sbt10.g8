@@ -4,15 +4,16 @@ name := "$name$"
 
 version := "$version$"
 
-scalaVersion := "2.9.2"
+scalaVersion := "2.10.0"
 
-crossScalaVersions := Seq("2.9.0-1", "2.9.1", "2.9.2" )
+crossScalaVersions := Seq("2.9.2" )
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "1.7.2" % "test"
+libraryDependencies ++= Seq(
+  "com.typesafe" %% "scalalogging-slf4j" % "1.0.0",
+  "org.scalatest" % "scalatest_2.10.0" % "2.0.M5b" % "test"
+)
 
-//libraryDependencies += "com.typesafe.akka" % "akka-actor" % "2.0.1"
-
-scalacOptions += "-deprecation"
+scalacOptions ++= Seq("-deprecation", "-feature")
 
 scalaSource in Compile <<= baseDirectory(_ / "src")
 

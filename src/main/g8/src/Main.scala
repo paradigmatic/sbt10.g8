@@ -1,6 +1,6 @@
-package $name$
+package $organization$.$name$
 
-object Stub extends App {
+object Main extends App {
 
   println("Hello, World !")
 
