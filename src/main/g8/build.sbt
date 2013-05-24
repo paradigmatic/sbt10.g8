@@ -4,13 +4,13 @@ name := "$name$"
 
 version := "$version$"
 
-scalaVersion := "2.10.0"
+scalaVersion := "2.10.1"
 
-crossScalaVersions := Seq("2.9.2" )
+//crossScalaVersions := Seq("2.9.2" )
 
 libraryDependencies ++= Seq(
   "com.typesafe" %% "scalalogging-slf4j" % "1.0.0",
-  "org.scalatest" % "scalatest_2.10.0" % "2.0.M5b" % "test"
+  "org.scalatest" %% "scalatest" % "1.9.1" % "test"
 )
 
 scalacOptions ++= Seq("-deprecation", "-feature")
